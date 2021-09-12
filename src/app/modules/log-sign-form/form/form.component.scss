@@ -1,0 +1,58 @@
+
+@import '../../../../assets/scss/link.scss';
+
+
+main{
+  @include flex(center);
+  section{
+    @include size(768px,500px);
+    @include flex(between,column);
+    app-log-in-form{width:70%}
+    .form-card{
+      @include flex(center,column);
+      padding: 3rem 0;
+    .logo{width:60%}
+    }
+    .sign-up-link{
+      @include flex(center);
+      padding: 2rem 0;
+    button{
+      background-color:transparent;
+      font-weight: 600;
+      color:#069ce3;
+      margin:  0 .5rem;
+    }
+    }
+    .title{ @include flex(center);}
+    .store-links{
+      @include flex(center);
+      a{
+        @include size(70px,50%);
+        margin:0 1rem;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width:500px){
+  main{
+    section{
+      app-log-in-form{width:100%}
+      .form-card{
+        .logo{width:250px}
+      }
+      .sign-up-link{
+        @include flex(center,column);
+        padding: 1rem 0;
+      }
+      .store-links{
+        @include flex(center,column);
+        a{
+          @include size(70px,100%);
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+
+@import 'src/assets/scss/link.scss';
+
+
+main{
+@include flex(center,column);
+  .backLink{
+    a{
+      font-weight: 500;
+        transition: color .3s ease-in-out;
+        &:hover{
+          transition: color .3s ease-in-out;
+          color: #069ce3;
+        }
+    }
+  }
+}

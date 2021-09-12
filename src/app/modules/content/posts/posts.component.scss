@@ -1,0 +1,27 @@
+
+@import 'src/assets/scss/link.scss';
+
+
+main{
+  @include flex(between);
+  flex-wrap: wrap;
+  padding:5rem  10rem;
+  .card:hover{
+    transform:scale(1.5);
+    transition: transform .3s ease-in .3s;
+  }
+}
+
+@media screen and (max-width:1120px){
+  main{
+    @include flex(center);
+  }
+}
+@media screen and (max-width:375px){
+  main{
+    padding:0;
+    .card{
+      width: 100%;
+    }
+  }
+}

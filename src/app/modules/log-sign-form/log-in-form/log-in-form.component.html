@@ -1,0 +1,12 @@
+<form [formGroup] = 'logIn'  >
+
+  <input formControlName ='userName' placeholder="Phone number, username or email">
+
+  <input formControlName= 'password' placeholder="Password">
+
+  <button type="button"
+          (click)="onSubmit()"
+          [class.valid]="logIn.valid"
+          routerLink="/content"
+          [disabled]="!logIn.valid">Log In</button>
+</form>

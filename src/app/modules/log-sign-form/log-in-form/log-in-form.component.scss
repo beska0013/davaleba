@@ -1,0 +1,34 @@
+@import '../../../../assets/scss/link.scss';
+
+form{
+  @include flex(center,column);
+  width:100%;
+  input,button{
+    border-radius: 5px;
+    @include size(50px,100%);
+  }
+  input{
+    @include font('Urbanist',16px,400,#000000);
+    border: 1px solid #c4c4c4;
+    background-color:#dfe1e430;
+    margin: .5rem 0;
+    padding:.5rem
+  }
+ button{
+    margin: 1.5rem 0 0 0;
+    background-color: #069ce37d;
+    color:#ffffff;
+    font-weight: 600;
+    font-size: 24px;
+    transition: background-color .3s linear;
+  }
+  .valid{
+    background-color: #069ce3;
+  }
+}
+
+@media screen and (max-width:360px){
+input{
+  font-size: 12px!important;
+}
+}

@@ -1,0 +1,8 @@
+
+<router-outlet *ngIf="valid;else notFound"></router-outlet>
+
+
+
+<ng-template #notFound>
+ <app-not-found></app-not-found>
+</ng-template>

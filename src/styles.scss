@@ -1,1 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'src/assets/scss/link.scss';
+
+body{
+  background-color:#dfe1e430;
+}
+input{
+  &:focus{
+    outline: none;
+  }
+}
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+button,
+h1,h2,h3,h4,h5,h6{@include font('Urbanist',24px,400,#000000)}
+p,a{@include font('Urbanist',16px,300,#000000)}
+html,body,img,svg,main{@include square(100%)}
+li{ list-style: none;}
+button{
+  border: none;
+  cursor: pointer;
+  &:active{
+    border-style: none;
+  }
+}
+a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+
+  &:active {
+    color: #000000;
+  }
+}
+.block{
+  background-color: #ffffff;
+  border: 1px solid #c4c4c4;
+  width: 100%;
+}
+.card{
+  @include min-size(100px, 360px);
+  @include size(300px, 20%);
+  border:1px solid #c4c4c4;
+  margin:1rem;
+  background-color:#ffffff;
+  cursor: pointer;
+  transition: transform .3s ease-in;
+  box-shadow: 0 6px 20px -5px #00000038;
+  ul{
+    @include square(100%);
+    @include flex(between,column);
+    li{
+      width:100%;
+      padding:.5rem;
+      &:nth-child(1){
+        @include flex(even);
+        background-color: #069ce37d;
+        h5{ color:#ffffff;}
+      }
+      &:nth-child(2){
+        height:100%;
+        @include flex(between,column);
+        .post-title{@include flex(center,column);}
+        h4{text-transform:uppercase}
+        .post-body{
+          @include flex(center);
+          height:100%
+        }
+      }
+      h5,h4{
+        font-weight: 600;
+        font-size: 20px
+      }
+      p{text-align: center}
+    }
+  }
+}
+
+@media screen and (max-width:500px){
+  main{
+    padding: 0 1rem;
+    section{
+      @include size(90%!important,100%!important);
+      width: 100%!important;
+      .block{
+        padding: 2rem 1rem!important;
+      }
+    }
+  }
+}
+@media screen and (max-width:360px){
+  h1,h2,h3,h4,h5,h6{font-size: 20px}
+}
